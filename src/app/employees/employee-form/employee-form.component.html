@@ -1,0 +1,24 @@
+<!-- bind form element and input control to FormBuilde in he service file  using directive -->
+<!-- class submitted is applied when form is submitted-->
+<form  class="row" [formGroup]="service.employeeForm" (submit)="onSubmit()" [class.submitted]="submitted">
+    <div class="col-12 mb-3">
+        <label for="" class="form-label">Full name</label>
+        <input type="text" class="form-control form-control-lg" placeholder="Enter your full name" formControlName="fullName">
+    </div>
+    <div class="col-12 mb-3">
+        <label for="" class="form-label">Location</label>
+        <input type="text" class="form-control form-control-lg" placeholder="City, country" formControlName="location">
+    </div>
+    <div class="col-6 mb-3">
+        <label for="" class="form-label">Position</label>
+        <input type="text" class="form-control form-control-lg" placeholder="Designation" formControlName="position">
+    </div>
+    <div class="col-6 mb-3">
+        <label for="" class="form-label">Salary</label>
+        <input type="text" class="form-control form-control-lg" placeholder="Per year" formControlName="salary" type="number">
+    </div>
+    <div class="col-12 d-grid" style="margin-bottom: 10px;">
+        <button class="btn btn-lg btn-primary" type="submit">Submit</button>
+    </div>
+    
+</form>
